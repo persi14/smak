@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block rofls %}
+{% load staticfiles %}
+	<style type="text/css">
+		.services{
+			width:80%;
+			text-align:center;
+			margin:25px auto;
+			float: center;
+		}
+
+		.services tr td{padding:0 20px}
+
+		.services tr:first-child td div{
+			width:172px;
+			height:172px;
+			background-size:cover;
+			margin:auto;padding:0;
+			-webkit-border-radius:100px;
+			border-radius:100px
+			}
+
+		.services tr td div{
+			padding:20px 0;
+			font-size:18px}
+
+		.services tr:last-child a{
+			font-size:14px;
+			color:#FECB30;
+			text-decoration:underline;
+		}
+
+		.services tr:last-child a:hover { 
+    		text-decoration: none; 
+   		} 
+
+	</style>
+	
+	<h1 style="text-align: center;">НАША ПРОДУКЦИЯ</h1>
+
+	<table class="services">		
+	<tr>
+      <td>
+        <a href="#"><div style="background:url({% static 'image/index2.jpg' %}) center center"></div></a>
+      </td>
+      <td>
+        <a href="#"><div style="background:url({% static 'image/index3.jpg' %}) center center"></div></a>
+      </td>
+      <td>
+        <a href="#"><div style="background:url({% static 'image/index4.jpg' %}) center center"></div></a>
+      </td>
+    </tr>
+    <tr>
+	      <td>
+	        <a href="#"><div>Баранина</div></a>
+	      </td>
+	      <td>
+	        <a href="#"><div>Говядина</div></a>
+	      </td>
+	      <td>
+	        <a href="#"><div>Птица</div></a>
+	      </td>
+    </tr>
+	</table>
+
+{% endblock %}
+
+{% block content %}
+{% load staticfiles %}
+
+
+	<div class="content">
+		<h1>О КОМПАНИИ</h1>
+		<p>Наша компания уже более 10 лет работает на рынке города и области!</p>
+
+		<p>У нас работают ПРОФЕССИОНАЛЫ высочайшего класса, которые смогут воплотить практически любую Вашу задумку в жизнь.</p>
+
+		<p>Проводим предварительную консультацию.</p>
+
+		<p>Наши цены весьма гибкие и лояльные, мы предлагаем различные сезонные акции, во время которых Вы можете получить скидку.</p>
+
+		<p>Наша работа окончательно убедит Вас в том, что мы — это то, что Вам нужно.</p>
+
+		<p>Звоните, и наши специалисты ответят на все Ваши вопросы.</p>
+
+		<p><img src="{% static 'image/index1.jpg' %}" width="70%"></p>
+		
+		<p>Мы специализируемся на оказании высококачественных услуг.</p>
+		
+		<p>Квалифицированные сотрудники внимательно изучат ваши потребности и предложат наиболее выгодные условия обслуживания.</p>
+		
+		<p>Все специалисты — профессионалы, которые любят свою работу. Вы можете смело довериться нам.</p>
+
+		<p>Наша главная задача — воплощение в жизнь идей и пожеланий наших клиентов с максимальным исполнительским качеством с использованием новейших технологий.</p>
+		
+		<p>Мы работаем, вы отдыхаете!</p>
+	</div>
+{% endblock %}

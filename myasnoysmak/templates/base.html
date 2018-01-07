@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/smak.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
+	<title>Мясной смак</title>
+	<style>
+    .header_info:after {
+    background-image: url({% static 'image/header.jpg' %});
+    }
+  </style>
+</head>
+<body>
+
+	<div class="firstheader">
+		<nav>
+	        <ul class="menu_1">                               
+	          <li><a href="{% url 'index' %}" target="_self"><span><span>Главная</span></span></a></li>
+	          <li><a href="#" target="_self"><span><span>Наша продукция</span></span></a></li>
+	          <li><a href="#" target="_self"><span><span>О компании</span></span></a></li>
+	          <li><a href="#" target="_self"><span><span>Отзывы</span></span></a></li>
+	          <li><a href="#" target="_self"><span><span>Контакты</span></span></a></li>
+	        </ul>
+    	</nav>
+	</div>
+
+	<div class="header_info">
+      <div>
+        <div class="header_logo">
+          <p>Мясной Смак</p>
+          <span>Продажа мяса</span>
+        </div>
+        <div class="header_desc">
+          <div class="header_adress"><span class="glyphicon glyphicon-flag" style="color:#A9A9A9;"></span>   Адреса магазинов<br>ул. Коммунистичская 20<br>ул. Прудская 20</div>
+          <div class="header_phone">
+            <p><span class="glyphicon glyphicon-earphone" style="color:#A9A9A9;"></span>   телефон 8-800-555-35-35</p>
+          </div>
+          <div class="header_mail">
+            <p><a href="mailto:myasnoy-smak@yandex.ru"><span class="glyphicon glyphicon-envelope" style="color:#A9A9A9;"></span>   myasnoy-smak@yandex.ru</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+
+	{% block rofls %}
+	{% endblock %}
+	
+
+
+
+	<div class="leftbar">
+		<ul class="menu_1">                               
+	          <li><a href="{% url 'index' %}" target="_self"><span><span>Главная</span></span></a></li>
+	          <li><a href="#" target="_self"><span><span>Наша продукция</span></span></a></li>
+	          <li><a href="#" target="_self"><span><span>О компании</span></span></a></li>
+	          <li><a href="#" target="_self"><span><span>Отзывы</span></span></a></li>
+	          <li><a href="#" target="_self"><span><span>Контакты</span></span></a></li>
+	        </ul>
+	</div>
+
+	{% block content %}
+	{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+body{
+	background-color: #302D32;
+	font-family:'Roboto Condensed',sans-serif;color:#FFFFFF;font-size:19px;
+}
+
+h1{
+	font-size: 32pt;
+	font-weight: bold;
+}
+
+
+.firstheader{
+	background-color: #000000;
+	min-height:100px;
+	min-width:1000px;
+	margin:0 0 0px;
+}
+
+.firstheader a {
+	color: #fff;
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   } 
+
+.firstheader a:hover { 
+    text-decoration: none; /* Добавляем подчеркивание при наведении курсора на ссылку */
+   } 
+
+.firstheader li{
+	list-style-type:none;
+}
+
+.firstheader nav{
+	height:90px;
+	background:#000;
+	width:100%}
+.firstheader nav>ul{
+	margin:0 auto;
+	width:100%;
+	height:px;
+	text-align:center}
+.firstheader nav>ul>li{
+	display:inline-block;
+	position:relative}
+.firstheader nav>ul>li>a{
+	font-family:'Roboto Condensed',sans-serif;color:#fff;
+	font-size:19px;
+	display:inline-block;
+	padding:36px 10px;
+	text-decoration:none;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	transition:all 0.2s ease}
+.firstheader nav ul li:hover>a,.firstheader nav ul li a:hover{
+	color:#000;
+	background:#fff
+	}
+.firstheader nav>ul ul{
+	display:none;
+	position:absolute;
+	top:90px;
+	left:0;
+	background:#000;
+	z-index:10;
+	border:1px solid #fff
+	}
+.firstheader nav>ul li{
+	position:relative
+	}
+.firstheader nav ul li:hover>ul{
+	display:block
+	}
+.firstheader nav>ul ul a{
+	display:block;
+	color:#fff;
+	font-size:17px;
+	padding:10px;
+	min-width:200px;
+	text-decoration:none;
+	border-bottom:1px solid #fff
+}
+
+.firstheader nav>ul ul li:last-child a{
+	border-bottom:0
+}
+.firstheader nav>ul ul ul{left:100%;top:0}
+
+.header_info{
+	width:100%;
+	min-height:460px;
+	position:relative
+	}
+.header_info:before{
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:45%;
+	left:0;
+	z-index:1;
+	background: linear-gradient(135deg, #BD9E2A, #F7C72E);
+	background-size:cover;content:'';
+	display:block}
+.header_info:after{
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:55%;
+	right:0;
+	z-index:2;
+	background-size:cover;
+	content:'';display:block}
+.header_info>div{
+	position:relative;
+	margin:auto;
+	width:1000px;
+	z-index:3;
+	padding:0 0 20px}
+.header_logo{
+	color: #000000;
+	font-family:'Roboto Condensed',sans-serif;
+	padding:30px 0 30px 20px;text-transform:uppercase;font-weight:700;width:354px}
+.header_logo p{
+	font-size:58px;
+	line-height:60px;
+	margin:0 0 10px}
+.header_logo span{
+	font-size:18px;
+	display:block}
+.header_desc{
+	background:#fff;
+	padding:20px;
+	color:#000;
+	width:345px}
+.header_desc>div:last-child{
+	margin:0}
+.header_adress,.header_phone,.header_mail{
+	padding:2px 0 2px 30px;
+	margin:0 0 20px}
+.header_adress{
+	font-size:15px;
+	background:url(img/ico_adress.png) no-repeat left center}
+.header_phone{
+	font-size:20px;
+	line-height:20px;
+	background:url(img/ico_phone.png) no-repeat left center}
+.header_mail{
+	font-size:15px;
+	background:url(img/ico_mail.png) no-repeat left center}
+.header_mail a{
+	color:#000}
+
+.leftbar{
+	width:250px;
+	min-height:100px;
+	position:relative;
+	vertical-align:top;
+	float:left;
+	margin:20px 0 20px 20px;
+	background-color: #4A494B;
+	padding: 20px 0 0 0;
+}
+
+
+.leftbar a{
+	display:block;
+	color:#fff;
+	font-size:16pt;
+	padding:5px;
+	min-width:200px;
+	text-decoration:none;
+}
+
+.leftbar li{
+	list-style-type: none;
+}
+
+.content{
+	width:800px;
+	min-height:100px;
+	display:table-cell;
+	position:relative;
+	float:right;
+	margin: 3px 10% 0 2%;
+}
+
+.content p{
+	font-size: 13pt;
+}
