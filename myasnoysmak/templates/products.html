@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+{% load staticfiles %}
+
+
+	<div class="content">
+		<style type="text/css">
+			.services{
+				width:80%;
+				text-align:center;
+				margin:25px auto;
+				float: center;
+			}
+
+			.services tr td{padding:0 20px}
+
+			.services tr:first-child td div{
+				width:172px;
+				height:172px;
+				background-size:cover;
+				margin:auto;padding:0;
+				-webkit-border-radius:100px;
+				border-radius:100px
+				}
+
+			.services tr td div{
+				padding:20px 0;
+				font-size:18px}
+
+			.services tr:last-child a{
+				font-size:14px;
+				color:#FECB30;
+				text-decoration:underline;
+			}
+
+			.services tr:last-child a:hover { 
+	    		text-decoration: none; 
+	   		} 
+
+		</style>
+		
+		<h1 style="text-align: center;">НАША ПРОДУКЦИЯ</h1>
+
+		<table class="services">		
+		<tr>
+	      <td>
+	        <a href="#"><div style="background:url({% static 'image/index2.jpg' %}) center center"></div></a>
+	      </td>
+	      <td>
+	        <a href="#"><div style="background:url({% static 'image/index3.jpg' %}) center center"></div></a>
+	      </td>
+	      <td>
+	        <a href="#"><div style="background:url({% static 'image/index4.jpg' %}) center center"></div></a>
+	      </td>
+	      <td>
+	        <a href="#"><div style="background:url({% static 'image/index5.jpg' %}) center center;"></div></a>
+	      </td>
+	    </tr>
+	    <tr>
+		      <td>
+		        <a href="#"><div>Свинина</div></a>
+		      </td>
+		      <td>
+		        <a href="#"><div>Говядина</div></a>
+		      </td>
+		      <td>
+		        <a href="#"><div>Птица</div></a>
+		      </td>
+		      <td>
+		        <a href="#"><div>Полуфабрикаты</div></a>
+		      </td>
+	    </tr>
+		</table>
+	</div>
+{% endblock %}

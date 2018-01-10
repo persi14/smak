@@ -25,7 +25,7 @@ SECRET_KEY = 'gvf+cnx=nv@_n(vmexd=6t#d=spf)ha3o7yf)u#2x91^==)8n9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'persi.pythonanywhere.com']
 
 
 # Application definition

@@ -41,6 +41,7 @@ h1{
 .firstheader nav>ul>li{
 	display:inline-block;
 	position:relative}
+
 .firstheader nav>ul>li>a{
 	font-family:'Roboto Condensed',sans-serif;color:#fff;
 	font-size:19px;
@@ -51,20 +52,25 @@ h1{
 	-moz-transition:all 0.2s ease;
 	-ms-transition:all 0.2s ease;
 	-o-transition:all 0.2s ease;
-	transition:all 0.2s ease}
+	transition:all 0.2s ease
+}
+
 .firstheader nav ul li:hover>a,.firstheader nav ul li a:hover{
 	color:#000;
 	background:#fff
-	}
+}
+
 .firstheader nav>ul ul{
 	display:none;
 	position:absolute;
-	top:90px;
+	top:98px;
 	left:0;
 	background:#000;
-	z-index:10;
-	border:1px solid #fff
-	}
+	z-index:999;
+	border:1px solid #fff;
+	width: 200px;
+}
+
 .firstheader nav>ul li{
 	position:relative
 	}
@@ -75,16 +81,23 @@ h1{
 	display:block;
 	color:#fff;
 	font-size:17px;
-	padding:10px;
-	min-width:200px;
+	padding:10px 10px 10px 0;
+	width: 200px;
 	text-decoration:none;
 	border-bottom:1px solid #fff
+}
+
+.firstheader nav>ul ul li{
+	left: -40px;
 }
 
 .firstheader nav>ul ul li:last-child a{
 	border-bottom:0
 }
-.firstheader nav>ul ul ul{left:100%;top:0}
+
+.menu_2{
+	border-left: 1px solid #fff;
+}
 
 .header_info{
 	width:100%;
@@ -165,15 +178,27 @@ h1{
 .leftbar a{
 	display:block;
 	color:#fff;
-	font-size:16pt;
+	font-size:14pt;
 	padding:5px;
-	min-width:200px;
+	width:100%;
 	text-decoration:none;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	transition:all 0.2s ease;
 }
 
 .leftbar li{
 	list-style-type: none;
 }
+
+.leftbar ul li:hover>a,.leftbar ul li a:hover{
+	color:#000;
+	background:#fff
+}
+
+
 
 .content{
 	width:800px;
@@ -181,9 +206,29 @@ h1{
 	display:table-cell;
 	position:relative;
 	float:right;
-	margin: 3px 10% 0 2%;
+	margin: 3px 10% 50px 2%;
 }
 
 .content p{
 	font-size: 13pt;
+}
+
+
+.review{
+	font-size: 15pt;
+	width:70%;
+	margin-bottom: 20px;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+
+.review p{
+	border-left:1px solid #fff; 
+	border-bottom:1px solid #fff; 
+	min-height: 50px; 
+	padding: 5px 0 5px 10px;  
+	box-shadow: -20px 15px 10px 3px rgba(0, 0, 0, .2);
 }
