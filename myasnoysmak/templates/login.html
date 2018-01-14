@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load staticfiles %}
+
+	<h2>ВХОД</h2>
+	<form action="" method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" name="войти">
+		<input type="hidden" name="next" value="{{ next }}">
+	</form>
+		}
+{% endblock %}

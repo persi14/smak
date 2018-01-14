@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 
-from .models import Review
+from .models import News
 
 def index(request):
 	return render(request, 'index.html')
@@ -11,27 +11,15 @@ def contacts(request):
 def about(request):
 	return render(request, 'about.html')
 
-def reviews(request):
-	reviews = Review.objects.all().order_by('idreview').reverse()
-	return render(request, 'reviews.html', {'reviews':reviews})
+def news(request):
+	news = News.objects.all().order_by('idnews').reverse()
+	return render(request, 'news.html', {'news':news})
 
 def products(request):
 	return render(request, 'products.html')
 
-def add_review(request):
-	from .forms import Add_Review
-	import datetime
-	if request.method == "POST":
-		form = Add_Review(request.POST)
-		if form.is_valid():
-			reviews = Review.objects.all().order_by('idreview').reverse()
-			idreview = reviews[0].idreview + 1
-			today = datetime.date.today()
-			fields = form.cleaned_data
-			Review.objects.create(idreview=idreview, date=today, author = fields['author'], text = fields['text'])
-			return redirect('reviews')
-	form = Add_Review()
-	return render(request, 'add_review.html', {'form':form})
-
+def news_detail(request, idnews):
+	news = News.objects.get(idnews=idnews)
+	return render(request, 'news_detail.html', {'news':news})
 
 # Create your views here.

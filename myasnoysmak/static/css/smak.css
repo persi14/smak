@@ -9,6 +9,21 @@ h1{
 }
 
 
+
+h2{
+	font-size: 25pt;
+	text-decoration: underline;
+}
+
+
+.round{
+    border-radius: 20000px; /* Радиус скругления */
+    border: 3px solid grey; /* Параметры рамки */
+    box-shadow: 0 0 7px #666; /* Параметры тени */
+    width: 180px;
+    height: 180px;
+}
+
 .firstheader{
 	background-color: #000000;
 	min-height:100px;
@@ -214,21 +229,31 @@ h1{
 }
 
 
-.review{
-	font-size: 15pt;
-	width:70%;
-	margin-bottom: 20px;
-	-webkit-transition:all 0.3s ease;
-	-moz-transition:all 0.3s ease;
-	-ms-transition:all 0.3s ease;
-	-o-transition:all 0.3s ease;
-	transition:all 0.3s ease;
+.news{
+	font-size: 13pt;
+	margin-bottom: 10px;
 }
 
-.review p{
-	border-left:1px solid #fff; 
-	border-bottom:1px solid #fff; 
-	min-height: 50px; 
-	padding: 5px 0 5px 10px;  
-	box-shadow: -20px 15px 10px 3px rgba(0, 0, 0, .2);
+.news a{
+	text-decoration: underline;
+	font-size: 16pt;
+	color:#fff;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	transition:all 0.2s ease
+}
+
+.news a:hover{
+	font-size: 17pt;
+	color: #E7E7E7;
+}
+
+.news_detail{
+	font-size: 13pt;
+}
+
+.news_detail p{
+	font-size: 15pt;
 }

@@ -1,6 +1,11 @@
 from django.contrib import admin
-from .models import Review
+from .models import News
 
-admin.site.register(Review)
+
+class NewsAdmin(admin.ModelAdmin):
+	fields = ['title', 'text']
+	list_display = ('title', 'date')
+
+admin.site.register(News, NewsAdmin)
 
 # Register your models here.

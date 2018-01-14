@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load staticfiles %}
+
+
+	<div class="content">
+		<h1>НОВОСТИ</h1>
+		{% for n in news %}
+			<div class="news">
+				{{ n.date }}<br>
+				<a href="{% url 'news_detail' idnews=n.idnews %}">{{ n.title }}</a>
+
+			</div>
+
+		{% endfor %}	
+
+
+	</div>
+{% endblock %}
