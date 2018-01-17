@@ -30,13 +30,29 @@ class News(models.Model):
 
 class Product(models.Model):
     idproduct = models.AutoField(primary_key=True)
-    nameproduct = models.CharField(max_length=100, blank=True, null=True)
-    foodvalue = models.CharField(max_length=150, blank=True, null=True)
-    energyvalue = models.CharField(max_length=150, blank=True, null=True)
-    idtype = models.ForeignKey('TypeProduct', models.DO_NOTHING, db_column='idtype',)
+    nameproduct = models.CharField(max_length=100, blank=True, null=True, verbose_name="Название продукта")
+    foodvalue = models.CharField(max_length=150, blank=True, null=True, verbose_name="Пищевая ценность")
+    energyvalue = models.CharField(max_length=150, blank=True, null=True, verbose_name="Энергитеческая ценность")
+    idtype = models.ForeignKey('TypeProduct', models.DO_NOTHING, db_column='idtype', verbose_name="Тип продукта")
+    image = models.ImageField(upload_to="product", verbose_name="Изображение")
+    structure = models.CharField(max_length=150, blank=True, null=True, verbose_name="Состав")
 
     def __str__(self):
         return self.nameproduct
+
+    def save(self, *args, **kwargs):
+        try:
+            this_product = Product.objects.get(idproduct = self.idproduct)
+            if this_product.image != self.image:
+                this_product.image.delete(save=False)
+        except:
+            pass
+        super(Product, self).save(*args, **kwargs)
+
+
+    def delete(self, *args, **kwargs):
+        self.image.delete(save=False)
+        super(Product, self).delete(*args, **kwargs)
 
     class Meta:
         managed = False
@@ -47,7 +63,8 @@ class Product(models.Model):
 
 class TypeProduct(models.Model):
     idtype = models.AutoField(primary_key=True)
-    nametype = models.CharField(unique=True, max_length=100, blank=True, null=True)
+    nametype = models.CharField(unique=True, max_length=100, blank=True, null=True, verbose_name = u'Тип продукта')
+
 
     def __str__(self):
         return self.nametype

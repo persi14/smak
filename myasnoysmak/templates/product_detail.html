@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load staticfiles %}
+
+
+	<div class="content" style="margin-top: 40px;">
+	<img src="{{ product.image.url }}" align="left" style="width:50%; margin-right: 30px;">
+	<p style="font-size: 20pt;">{{ product.nameproduct }}</p><hr>
+	{% if product.structure %}
+		<p><strong>Состав</strong> - {{ product.structure }}</p>
+	{% endif %}
+	{% if product.foodvalue %}
+		<p><strong>Пищевая ценность</strong> - {{ product.foodvalue }}</p>
+	{% endif %}
+	{% if product.energyvalue %}
+		<p><strong>Энергитеческая ценность</strong> - {{ product.energyvalue }}</p>
+	{% endif %}
+ 	
+	<p style="margin-top: 80px;"><a href="{% url 'list_product' idtype=product.idtype.idtype %}" >Вернуться назад в раздел "{{ product.idtype.nametype }}"</a></p>
+
+	</div>
+
+{% endblock %}

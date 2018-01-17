@@ -40,35 +40,41 @@
 	<h1 style="text-align: center;">НАША ПРОДУКЦИЯ</h1>
 
 	<table class="services">		
-	<tr>
-      <td>
-        <a href="#"><div style="background:url({% static 'image/index2.jpg' %}) center center; background-size: 150%;"></div></a>
-      </td>
-      <td>
-        <a href="#"><div style="background:url({% static 'image/index3.jpg' %}) center center"></div></a>
-      </td>
-      <td>
-        <a href="#"><div style="background:url({% static 'image/index4.jpg' %}) center center"></div></a>
-      </td>
-      <td>
-        <a href="#"><div style="background:url({% static 'image/index5.jpg' %}) center center;"></div></a>
-      </td>
-    </tr>
-    <tr>
+		<tr>
 	      <td>
-	        <a href="#"><div>Свинина</div></a>
+	        <a href="{% url 'list_product' idtype=1 %}"><div style="background:url({% static 'image/index2.jpg' %}) center center; background-size: 150%;"></div></a>
 	      </td>
 	      <td>
-	        <a href="#"><div>Говядина</div></a>
+	        <a href="{% url 'list_product' idtype=2 %}"><div style="background:url({% static 'image/index3.jpg' %}) center center"></div></a>
+	      </td>
+	       <td>
+	        <a href="{% url 'list_product' idtype=3 %}"><div style="background:url({% static 'image/index6.jpg' %}) center center; background-size: 170%;"></div></a>
 	      </td>
 	      <td>
-	        <a href="#"><div>Птица</div></a>
+	        <a href="{% url 'list_product' idtype=4 %}"><div style="background:url({% static 'image/index4.jpg' %}) center center"></div></a>
 	      </td>
 	      <td>
-	        <a href="#"><div>Полуфабрикаты</div></a>
+	        <a href="{% url 'list_product' idtype=5 %}"><div style="background:url({% static 'image/index5.jpg' %}) center center;"></div></a>
 	      </td>
-    </tr>
-	</table>
+	    </tr>
+	    <tr>
+		      <td>
+		        <a href="{% url 'list_product' idtype=1 %}"><div>Свинина</div></a>
+		      </td>
+		      <td>
+		        <a href="{% url 'list_product' idtype=2 %}"><div>Говядина</div></a>
+		      </td>
+		      <td>
+		        <a href="{% url 'list_product' idtype=3 %}"><div>Шашлык</div></a>
+		      </td>
+		      <td>
+		        <a href="{% url 'list_product' idtype=4 %}"><div>Птица</div></a>
+		      </td>
+		      <td>
+		        <a href="{% url 'list_product' idtype=5 %}"><div>Полуфабрикаты</div></a>
+		      </td>
+	    </tr>
+		</table>
 
 {% endblock %}
 
@@ -77,7 +83,7 @@
 
 
 	<div class="content">
-		<h1>О КОМПАНИИ</h1>
+		<h1>О НАС</h1>
 		<p>Наша компания уже более 10 лет работает на рынке города и области!</p>
 
 		<p>У нас работают ПРОФЕССИОНАЛЫ высочайшего класса, которые смогут воплотить практически любую Вашу задумку в жизнь.</p>
@@ -101,5 +107,16 @@
 		<p>Наша главная задача — воплощение в жизнь идей и пожеланий наших клиентов с максимальным исполнительским качеством с использованием новейших технологий.</p>
 		
 		<p>Мы работаем, вы отдыхаете!</p>
+
+
+		<h1>НОВОСТИ</h1>
+		{% for n in news %}
+			<div class="news">
+				{{ n.date }}<br>
+				<a href="{% url 'news_detail' idnews=n.idnews %}">{{ n.title }}</a>
+
+			</div>
+
+		{% endfor %}
 	</div>
 {% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load staticfiles %}
+
+
+	<div class="content" style=" margin-right: 5%; margin-left: 0%">
+	
+	<h1 style="margin-bottom: 20px; text-align: center; padding-right: 40px;">{{ typeproduct.nametype }}</h1>
+	{% for p in products %}
+		<div class="product">
+			
+			<a href="{% url 'product_detail' idproduct=p.idproduct %}">
+			<img src="{{ p.image.url }}">
+			<p>{{ p.nameproduct }}</p>
+			</a>
+
+		</div>
+	{% endfor %}
+
+	</div>
+{% endblock %}

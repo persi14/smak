@@ -1,9 +1,10 @@
 from django.shortcuts import render, HttpResponse, redirect
 
-from .models import News
+from .models import News, TypeProduct, Product
 
 def index(request):
-	return render(request, 'index.html')
+	news = News.objects.all().order_by('idnews').reverse()
+	return render(request, 'index.html', {'news':news})
 
 def contacts(request):
 	return render(request, 'contacts.html')
@@ -22,4 +23,13 @@ def news_detail(request, idnews):
 	news = News.objects.get(idnews=idnews)
 	return render(request, 'news_detail.html', {'news':news})
 
+def list_product(request, idtype):
+	typeproduct = TypeProduct.objects.get(idtype=idtype)
+	products = Product.objects.filter(idtype=typeproduct)
+	return render(request, 'list_product.html', {'products':products, 'typeproduct':typeproduct})
+
+
+def product_detail(request, idproduct):
+	product = Product.objects.get(idproduct=idproduct)
+	return render(request, 'product_detail.html', {'product':product})
 # Create your views here.

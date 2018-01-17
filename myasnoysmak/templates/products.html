@@ -14,15 +14,18 @@
 				text-align:center;
 				margin:25px auto;
 				float: center;
+
 			}
 
-			.services tr td{padding:0 20px}
+			.services tr td{padding:0 50px}
+			
 
-			.services tr:first-child td div{
+			.circle{
 				width:172px;
 				height:172px;
 				background-size:cover;
-				margin:auto;padding:0;
+				margin:auto;
+				padding:0;
 				-webkit-border-radius:100px;
 				border-radius:100px
 				}
@@ -31,13 +34,13 @@
 				padding:20px 0;
 				font-size:18px}
 
-			.services tr:last-child a{
+			.services tr a{
 				font-size:14px;
 				color:#FECB30;
 				text-decoration:underline;
 			}
 
-			.services tr:last-child a:hover { 
+			.services tr a:hover { 
 	    		text-decoration: none; 
 	   		} 
 
@@ -48,32 +51,48 @@
 		<table class="services">		
 		<tr>
 	      <td>
-	        <a href="#"><div style="background:url({% static 'image/index2.jpg' %}) center center; background-size: 150%;"></div></a>
+	        <a href="{% url 'list_product' idtype=1 %}"><div class="circle" style="background:url({% static 'image/index2.jpg' %}) center center; background-size: 150%;"></div></a>
 	      </td>
-	      <td>
-	        <a href="#"><div style="background:url({% static 'image/index3.jpg' %}) center center"></div></a>
+	       <td>
+	        <a href="{% url 'list_product' idtype=3 %}"><div class="circle" style="background:url({% static 'image/index6.jpg' %}) center center; background-size: 170%;"></div></a>
 	      </td>
+	      
 	      <td>
-	        <a href="#"><div style="background:url({% static 'image/index4.jpg' %}) center center"></div></a>
-	      </td>
-	      <td>
-	        <a href="#"><div style="background:url({% static 'image/index5.jpg' %}) center center;"></div></a>
+	        <a href="{% url 'list_product' idtype=5 %}"><div class="circle" style="background:url({% static 'image/index5.jpg' %}) center center;"></div></a>
 	      </td>
 	    </tr>
 	    <tr>
 		      <td>
-		        <a href="#"><div>Свинина</div></a>
+		        <a href="{% url 'list_product' idtype=1 %}"><div>Свинина</div></a>
 		      </td>
+		      
 		      <td>
-		        <a href="#"><div>Говядина</div></a>
+		        <a href="{% url 'list_product' idtype=3 %}"><div>Шашлык</div></a>
 		      </td>
+		      
 		      <td>
-		        <a href="#"><div>Птица</div></a>
-		      </td>
-		      <td>
-		        <a href="#"><div>Полуфабрикаты</div></a>
+		        <a href="{% url 'list_product' idtype=5 %}"><div>Полуфабрикаты</div></a>
 		      </td>
 	    </tr>
+		</table>
+ 	    <table class="services">
+	    <tr>
+	    <td>
+	        <a href="{% url 'list_product' idtype=2 %}"><div class="circle" style="background:url({% static 'image/index3.jpg' %}) center center"></div></a>
+	     </td>
+	     <td>
+	        <a href="{% url 'list_product' idtype=4 %}"><div class="circle" style="background:url({% static 'image/index4.jpg' %}) center center;"></div></a>
+	      </td>
+	     </tr>
+	     <tr>
+	     <td>
+		        <a href="{% url 'list_product' idtype=2 %}"><div>Говядина</div></a>
+		      </td>
+	     <td>
+		        <a href="{% url 'list_product' idtype=4 %}"><div>Птица</div></a>
+		      </td>
+	     	
+	     </tr>
 		</table>
 	</div>
 {% endblock %}

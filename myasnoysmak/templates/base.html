@@ -22,13 +22,14 @@
 	          <li><a href="{% url 'index' %}" target="_self"><span><span>Главная</span></span></a></li>
 	          <li><a href="{% url 'products' %}" target="_self"><span><span>Наша продукция</span></span></a>
 	          	<ul>
-                  <li><a href="#"><span><span>Свинина</span></span></a></li>
-                  <li><a href="#"><span><span>Говядина</span></span></a></li>
-                  <li><a href="#"><span><span>Птица</span></span></a></li>
-                  <li><a href="#"><span><span>Полуфабрикаты</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=1 %}"><span><span>Свинина</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=2 %}"><span><span>Говядина</span></span></a></li>
+                   <li><a href="{% url 'list_product' idtype=3 %}"><span><span>Шашлык</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=4 %}"><span><span>Птица</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=5 %}"><span><span>Полуфабрикаты</span></span></a></li>
                 </ul>
 	          </li>
-	          <li><a href="{% url 'about' %}" target="_self"><span><span>О компании</span></span></a></li>
+	          <li><a href="{% url 'about' %}" target="_self"><span><span>О нас</span></span></a></li>
 	          <li><a href="{% url 'news' %}" target="_self"><span><span>Новости</span></span></a></li>
 	          <li><a href="{% url 'contacts' %}" target="_self"><span><span>Контакты</span></span></a></li>
 	        </ul>
@@ -65,13 +66,14 @@
 	          <li><a href="{% url 'index' %}" target="_self"><span><span>Главная</span></span></a></li>
 	          <li><a href="{% url 'products' %}" target="_self"><span><span>Наша продукция</span></span></a>
 	          	<ul class="menu_2">
-                  <li><a href="#"><span><span>Свинина</span></span></a></li>
-                  <li><a href="#"><span><span>Говядина</span></span></a></li>
-                  <li><a href="#"><span><span>Птица</span></span></a></li>
-                  <li><a href="#"><span><span>Полуфабрикаты</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=1 %}"><span><span>Свинина</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=2 %}"><span><span>Говядина</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=3 %}"><span><span>Шашлык</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=4 %}"><span><span>Птица</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=5 %}"><span><span>Полуфабрикаты</span></span></a></li>
                 </ul>
 	          </li>
-	          <li><a href="{% url 'about' %}" target="_self"><span><span>О компании</span></span></a></li>
+	          <li><a href="{% url 'about' %}" target="_self"><span><span>О нас</span></span></a></li>
 	          <li><a href="{% url 'news' %}" target="_self"><span><span>Новости</span></span></a></li>
 	          <li><a href="{% url 'contacts' %}" target="_self"><span><span>Контакты</span></span></a></li>
 	        </ul>

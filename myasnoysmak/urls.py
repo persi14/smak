@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
@@ -8,5 +10,7 @@ urlpatterns = [
     url(r'^about-company$', views.about, name='about'),
     url(r'^contacts$', views.contacts, name='contacts'),
     url(r'^news_detail_(?P<idnews>\d+)$', views.news_detail, name='news_detail'),
-    #url(r'^login/', "django.contribauth.views.login", {"template_name"="login.html"} name="login"),
+    url(r'^type-(?P<idtype>\d+)$', views.list_product, name='list_product'),
+    url(r'^product-(?P<idproduct>\d+)$', views.product_detail, name='product_detail')
 ]
+
