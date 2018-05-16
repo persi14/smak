@@ -3,16 +3,16 @@
 
 {% block content %}
 {% load staticfiles %}
+{% load thumbnail %}
 
+	<div class="content"  align="center" style="margin-right: 2%">
 
-	<div class="content" style=" margin-right: 5%; margin-left: 0%">
-	
-	<h1 style="margin-bottom: 20px; text-align: center; padding-right: 40px;">{{ typeproduct.nametype }}</h1>
+	<h1 style="margin-bottom: 20px; text-align: center; padding-right: 10px;">{{ typeproduct.nametype }}</h1>
 	{% for p in products %}
 		<div class="product">
-			
+
 			<a href="{% url 'product_detail' idproduct=p.idproduct %}">
-			<img src="{{ p.image.url }}">
+			<img src="{% thumbnail p.image 200x170 crop %}">
 			<p>{{ p.nameproduct }}</p>
 			</a>
 

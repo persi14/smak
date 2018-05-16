@@ -17,7 +17,10 @@
 	{% if product.energyvalue %}
 		<p><strong>Энергитеческая ценность</strong> - {{ product.energyvalue }}</p>
 	{% endif %}
- 	
+	{% if product.cost %}
+		<p><strong>Цена</strong> - {{ product.cost }}</p>
+	{% endif %}
+
 	<p style="margin-top: 80px;"><a href="{% url 'list_product' idtype=product.idtype.idtype %}" >Вернуться назад в раздел "{{ product.idtype.nametype }}"</a></p>
 
 	</div>

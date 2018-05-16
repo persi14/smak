@@ -18,11 +18,11 @@
 			}
 
 			.services tr td{padding:0 50px}
-			
+
 
 			.circle{
-				width:172px;
-				height:172px;
+				width:170px;
+				height:170px;
 				background-size:cover;
 				margin:auto;
 				padding:0;
@@ -40,15 +40,15 @@
 				text-decoration:underline;
 			}
 
-			.services tr a:hover { 
-	    		text-decoration: none; 
-	   		} 
+			.services tr a:hover {
+	    		text-decoration: none;
+	   		}
 
 		</style>
-		
+
 		<h1 style="text-align: center;">НАША ПРОДУКЦИЯ</h1>
 
-		<table class="services">		
+		<table class="services">
 		<tr>
 	      <td>
 	        <a href="{% url 'list_product' idtype=1 %}"><div class="circle" style="background:url({% static 'image/index2.jpg' %}) center center; background-size: 150%;"></div></a>
@@ -56,7 +56,7 @@
 	       <td>
 	        <a href="{% url 'list_product' idtype=3 %}"><div class="circle" style="background:url({% static 'image/index6.jpg' %}) center center; background-size: 170%;"></div></a>
 	      </td>
-	      
+
 	      <td>
 	        <a href="{% url 'list_product' idtype=5 %}"><div class="circle" style="background:url({% static 'image/index5.jpg' %}) center center;"></div></a>
 	      </td>
@@ -65,11 +65,11 @@
 		      <td>
 		        <a href="{% url 'list_product' idtype=1 %}"><div>Свинина</div></a>
 		      </td>
-		      
+
 		      <td>
 		        <a href="{% url 'list_product' idtype=3 %}"><div>Шашлык</div></a>
 		      </td>
-		      
+
 		      <td>
 		        <a href="{% url 'list_product' idtype=5 %}"><div>Полуфабрикаты</div></a>
 		      </td>
@@ -83,6 +83,9 @@
 	     <td>
 	        <a href="{% url 'list_product' idtype=4 %}"><div class="circle" style="background:url({% static 'image/index4.jpg' %}) center center;"></div></a>
 	      </td>
+	      <td>
+	        <a href="{% url 'list_product' idtype=8 %}"><div class="circle" style="background:url({% static 'image/index7.jpg' %}) center center;   background-size: 160%;"></div></a>
+	      </td>
 	     </tr>
 	     <tr>
 	     <td>
@@ -91,8 +94,13 @@
 	     <td>
 		        <a href="{% url 'list_product' idtype=4 %}"><div>Птица</div></a>
 		      </td>
-	     	
+		  <td>
+		        <a href="{% url 'list_product' idtype=8 %}"><div>Субпродукты</div></a>
+		      </td>
+
 	     </tr>
 		</table>
+		<br>
+		<p><a href="{% url 'price_list' %}" style="text-decoration: none; color:#fff; border:4px solid #fff; padding: 10px;"><span class="glyphicon glyphicon-download"></span> Скачать полный прайс</a></p>
 	</div>
 {% endblock %}

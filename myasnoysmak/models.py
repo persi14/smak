@@ -35,7 +35,8 @@ class Product(models.Model):
     energyvalue = models.CharField(max_length=150, blank=True, null=True, verbose_name="Энергитеческая ценность")
     idtype = models.ForeignKey('TypeProduct', models.DO_NOTHING, db_column='idtype', verbose_name="Тип продукта")
     image = models.ImageField(upload_to="product", verbose_name="Изображение")
-    structure = models.CharField(max_length=150, blank=True, null=True, verbose_name="Состав")
+    structure = models.TextField(max_length=400, blank=True, null=True, verbose_name="Состав")
+    cost = models.CharField(max_length=150, blank=True, verbose_name="Стоимость")
 
     def __str__(self):
         return self.nameproduct

@@ -18,7 +18,7 @@
 
 	<div class="firstheader">
 		<nav>
-	        <ul class="menu_1">                               
+	        <ul class="menu_1">
 	          <li><a href="{% url 'index' %}" target="_self"><span><span>Главная</span></span></a></li>
 	          <li><a href="{% url 'products' %}" target="_self"><span><span>Наша продукция</span></span></a>
 	          	<ul>
@@ -27,8 +27,10 @@
                    <li><a href="{% url 'list_product' idtype=3 %}"><span><span>Шашлык</span></span></a></li>
                   <li><a href="{% url 'list_product' idtype=4 %}"><span><span>Птица</span></span></a></li>
                   <li><a href="{% url 'list_product' idtype=5 %}"><span><span>Полуфабрикаты</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=8 %}"><span><span>Субпродукты</span></span></a></li>
                 </ul>
 	          </li>
+	            <li><a href="{% url 'cafe' %}" target="_self"><span><span>Кафе</span></span></a></li>
 	          <li><a href="{% url 'about' %}" target="_self"><span><span>О нас</span></span></a></li>
 	          <li><a href="{% url 'news' %}" target="_self"><span><span>Новости</span></span></a></li>
 	          <li><a href="{% url 'contacts' %}" target="_self"><span><span>Контакты</span></span></a></li>
@@ -45,7 +47,7 @@
         <div class="header_desc">
           <div class="header_adress"><span class="glyphicon glyphicon-flag" style="color:#A9A9A9;"></span>   Адреса магазинов<br>ул. Октябрьская 56<br>ул. Прудская 7а</div>
           <div class="header_phone">
-            <p><span class="glyphicon glyphicon-earphone" style="color:#A9A9A9;"></span>   телефон 8-800-555-35-35</p>
+            <p><span class="glyphicon glyphicon-earphone" style="color:#A9A9A9;"></span> Наши телефоны</p><p style="margin-right:30px;"> 8-963-503-9359</p><p style="margin-right:30px;">8-929-398-8471</p>
           </div>
           <div class="header_mail">
             <p><a href="mailto:myasnoy-smak@yandex.ru"><span class="glyphicon glyphicon-envelope" style="color:#A9A9A9;"></span>   myasnoy-smak@yandex.ru</a></p>
@@ -53,16 +55,16 @@
         </div>
       </div>
     </div>
-	
+
 
 	{% block rofls %}
 	{% endblock %}
-	
+
 
 
 
 	<div class="leftbar">
-	        <ul class="menu_1">                               
+	        <ul class="menu_1">
 	          <li><a href="{% url 'index' %}" target="_self"><span><span>Главная</span></span></a></li>
 	          <li><a href="{% url 'products' %}" target="_self"><span><span>Наша продукция</span></span></a>
 	          	<ul class="menu_2">
@@ -71,8 +73,10 @@
                   <li><a href="{% url 'list_product' idtype=3 %}"><span><span>Шашлык</span></span></a></li>
                   <li><a href="{% url 'list_product' idtype=4 %}"><span><span>Птица</span></span></a></li>
                   <li><a href="{% url 'list_product' idtype=5 %}"><span><span>Полуфабрикаты</span></span></a></li>
+                  <li><a href="{% url 'list_product' idtype=8 %}"><span><span>Субпродукты</span></span></a></li>
                 </ul>
 	          </li>
+	          <li><a href="{% url 'cafe' %}" target="_self"><span><span>Кафе</span></span></a></li>
 	          <li><a href="{% url 'about' %}" target="_self"><span><span>О нас</span></span></a></li>
 	          <li><a href="{% url 'news' %}" target="_self"><span><span>Новости</span></span></a></li>
 	          <li><a href="{% url 'contacts' %}" target="_self"><span><span>Контакты</span></span></a></li>
@@ -81,6 +85,10 @@
 
 	{% block content %}
 	{% endblock %}
+    <footer>
+      <div style="float:  left; padding-left: 10px;"><p>Copyright © 2018</p></div>
+      <div style="float:  right;padding-right: 10px;"><p>Разработка сайтов <a href="https://vk.com/kopylov_and"><img src="{% static 'image/vk.png' %}" width="40px"></a><a href="https://t.me/andrey_kopylov"><img src="{% static 'image/teleg.png' %}" width="25px"></a></p></div>
 
+    </footer>
 </body>
 </html>

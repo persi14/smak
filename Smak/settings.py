@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'gvf+cnx=nv@_n(vmexd=6t#d=spf)ha3o7yf)u#2x91^==)8n9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'persi.pythonanywhere.com']
+ALLOWED_HOSTS = ['webapp-376116.pythonanywhere.com','127.0.0.1', 'persi.pythonanywhere.com', 'www.myasnoy-smak.ru', 'myasnoy-smak.ru']
 
 
 
@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'persi.pythonanywhere.com']
 
 
 INSTALLED_APPS = [
+    'easy_thumbnails',
     'myasnoysmak',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -84,11 +85,10 @@ WSGI_APPLICATION = 'Smak.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smak',
-        'USER': 'root',
+        'NAME': 'persi$smak',
+        'USER': 'persi',
         'PASSWORD': 'irobot14',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'HOST': 'persi.mysql.pythonanywhere-services.com',
     }
 }
 
@@ -134,7 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads') 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/media/'
 
 

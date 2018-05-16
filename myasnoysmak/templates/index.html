@@ -13,8 +13,8 @@
 		.services tr td{padding:0 20px}
 
 		.services tr:first-child td div{
-			width:172px;
-			height:172px;
+			width:170px;
+			height:170px;
 			background-size:cover;
 			margin:auto;padding:0;
 			-webkit-border-radius:100px;
@@ -31,15 +31,15 @@
 			text-decoration:underline;
 		}
 
-		.services tr:last-child a:hover { 
-    		text-decoration: none; 
-   		} 
+		.services tr:last-child a:hover {
+    		text-decoration: none;
+   		}
 
 	</style>
-	
+
 	<h1 style="text-align: center;">НАША ПРОДУКЦИЯ</h1>
 
-	<table class="services">		
+	<table class="services">
 		<tr>
 	      <td>
 	        <a href="{% url 'list_product' idtype=1 %}"><div style="background:url({% static 'image/index2.jpg' %}) center center; background-size: 150%;"></div></a>
@@ -55,6 +55,9 @@
 	      </td>
 	      <td>
 	        <a href="{% url 'list_product' idtype=5 %}"><div style="background:url({% static 'image/index5.jpg' %}) center center;"></div></a>
+	      </td>
+	      <td>
+	        <a href="{% url 'list_product' idtype=8 %}"><div style="background:url({% static 'image/index7.jpg' %}) center center;  background-size: 160%;"></div></a>
 	      </td>
 	    </tr>
 	    <tr>
@@ -73,6 +76,9 @@
 		      <td>
 		        <a href="{% url 'list_product' idtype=5 %}"><div>Полуфабрикаты</div></a>
 		      </td>
+		      <td>
+		        <a href="{% url 'list_product' idtype=8 %}"><div>Субпродукты</div></a>
+		      </td>
 	    </tr>
 		</table>
 
@@ -84,30 +90,21 @@
 
 	<div class="content">
 		<h1>О НАС</h1>
-		<p>Наша компания уже более 10 лет работает на рынке города и области!</p>
+		<p>Едете на природу и не знаете где купить самый вкусный шашлык? </p>
+        <p>Устали после тяжёлого рабочего дня и не хочется готовить ужин самим? </p>
+        <p>Не знаете где купить свежего и экологически чистого мяса от местных поставщиков? </p>
+        <p>Ответ на все Ваши вопросы - магазин <strong>"Мясной смак"</strong>.</p>
+        <p>Большой выбор свежего мяса свинины, говядины, баранины, шашлыка и полуфабрикатов на любой вкус и кошелёк. </p>
 
-		<p>У нас работают ПРОФЕССИОНАЛЫ высочайшего класса, которые смогут воплотить практически любую Вашу задумку в жизнь.</p>
 
-		<p>Проводим предварительную консультацию.</p>
+		<p><img src="{% static 'image/about1.jpg' %}" width="70%"></p>
 
-		<p>Наши цены весьма гибкие и лояльные, мы предлагаем различные сезонные акции, во время которых Вы можете получить скидку.</p>
+		<p>Также в ассортименте шаурма, куры и окорочка гриль. </p>
+        <p>Приезжайте к нам по адресам: г. Новоалтайск, ул. Октябрьская, 56; Прудская, 7А. </p>
+        <p>Отдыхайте со "Смаком"!</p>
 
-		<p>Наша работа окончательно убедит Вас в том, что мы — это то, что Вам нужно.</p>
-
-		<p>Звоните, и наши специалисты ответят на все Ваши вопросы.</p>
-
-		<p><img src="{% static 'image/index1.jpg' %}" width="70%"></p>
-		
-		<p>Мы специализируемся на оказании высококачественных услуг.</p>
-		
-		<p>Квалифицированные сотрудники внимательно изучат ваши потребности и предложат наиболее выгодные условия обслуживания.</p>
-		
-		<p>Все специалисты — профессионалы, которые любят свою работу. Вы можете смело довериться нам.</p>
-
-		<p>Наша главная задача — воплощение в жизнь идей и пожеланий наших клиентов с максимальным исполнительским качеством с использованием новейших технологий.</p>
-		
-		<p>Мы работаем, вы отдыхаете!</p>
-
+		<h2>Прайс-Лист</h2>
+		<p><a href="{% url 'price_list' %}" style="text-decoration: none; color:#fff;"><span class="glyphicon glyphicon-download"></span> Скачать полный прайс</a></p>
 
 		<h1>НОВОСТИ</h1>
 		{% for n in news %}

@@ -11,6 +11,9 @@ urlpatterns = [
     url(r'^contacts$', views.contacts, name='contacts'),
     url(r'^news_detail_(?P<idnews>\d+)$', views.news_detail, name='news_detail'),
     url(r'^type-(?P<idtype>\d+)$', views.list_product, name='list_product'),
-    url(r'^product-(?P<idproduct>\d+)$', views.product_detail, name='product_detail')
+    url(r'^product-(?P<idproduct>\d+)$', views.product_detail, name='product_detail'),
+    url(r'^price_list$', views.price_list, name="price_list"),
+    url(r'^cafe', views.cafe, name="cafe"),
 ]
+
 

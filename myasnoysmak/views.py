@@ -32,4 +32,14 @@ def list_product(request, idtype):
 def product_detail(request, idproduct):
 	product = Product.objects.get(idproduct=idproduct)
 	return render(request, 'product_detail.html', {'product':product})
+
+
+
+def price_list(request):
+	f = open("/home/persi/smak/smak/myasnoysmak/static/Prays_Myasnoy-smak.zip", 'rb')
+	return HttpResponse(f, content_type='application/zip')
+
+def cafe(request):
+    return render(request, 'cafe.html')
+
 # Create your views here.

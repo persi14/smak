@@ -1,6 +1,29 @@
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+	.leftbar{
+		display: none;
+	}
+
+ 	.content{
+ 		width:90%;
+ 	}
+}
+
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 body{
+	height: 100%;
+    margin: 0;
+    padding: 0;
 	background-color: #302D32;
-	font-family:'Roboto Condensed',sans-serif;color:#FFFFFF;font-size:19px;
+	font-family:'Roboto Condensed',sans-serif;
+	color:#FFFFFF;
+	font-size:19px;
 }
 
 h1{
@@ -34,11 +57,11 @@ h2{
 .firstheader a {
 	color: #fff;
     text-decoration: none; /* Убирает подчеркивание для ссылок */
-   } 
+   }
 
-.firstheader a:hover { 
+.firstheader a:hover {
     text-decoration: none; /* Добавляем подчеркивание при наведении курсора на ссылку */
-   } 
+   }
 
 .firstheader li{
 	list-style-type:none;
@@ -166,25 +189,25 @@ h2{
 	padding:2px 0 2px 30px;
 	margin:0 0 20px}
 .header_adress{
-	font-size:15px;
+	font-size:21px;
 	background:url(img/ico_adress.png) no-repeat left center}
 .header_phone{
-	font-size:20px;
+	font-size:22px;
 	line-height:20px;
 	background:url(img/ico_phone.png) no-repeat left center}
 .header_mail{
-	font-size:15px;
+	font-size:20px;
 	background:url(img/ico_mail.png) no-repeat left center}
 .header_mail a{
 	color:#000}
 
 .leftbar{
-	width:250px;
+	width:20%;
 	min-height:100px;
 	position:relative;
 	vertical-align:top;
 	float:left;
-	margin:20px 0 20px 20px;
+	margin:20px 0 0 2%;
 	background-color: #4A494B;
 	padding: 20px 0 0 0;
 }
@@ -216,12 +239,14 @@ h2{
 
 
 .content{
-	width:800px;
-	min-height:100px;
-	display:table-cell;
+	width:60%;
+	min-height: 100%;
+	padding: auto;
+	display: table-cell;
 	position:relative;
-	float:right;
-	margin: 3px 10% 50px 2%;
+	float:left;
+	margin: 10px 10% 10% 7%;
+	padding-bottom: 50px;
 }
 
 .content p{
@@ -270,11 +295,10 @@ h2{
 
 .product{
 
-	margin-right:25px;
-	width: 46%;
-	height: 270px;
+
+	width:33%;
+	height: 250px;
 	color: #fff;
-	position: center;
 	text-align: center;
 	float: left;
 }
@@ -289,8 +313,20 @@ h2{
 
 .product img {
 	box-shadow: 0px 1px 49px 4px #000000;
-	width:70%; 
-	height: 210px; 
- 
+	width:85%;
+ 	height: 170px;
 	margin-bottom: 7px;
+	object-fit: cover;
    }
+
+
+footer{
+	padding: 10px;
+	width:100%;
+	background-color: #6C696E;
+	text-align: center;
+	height:50px;
+	display: block;
+	clear: left;
+	font-size: 13pt;
+}
